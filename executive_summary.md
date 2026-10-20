@@ -1,0 +1,6 @@
+# Executive Summary
+
+This report compares Kubernetes, Docker Swarm, and AWS Fargate for a fast-growing startup. Kubernetes provides the broadest orchestration flexibility and documented large-cluster guidance, but direct operation typically demands the most platform expertise. Docker Swarm is integrated into Docker Engine and offers a simpler way to orchestrate containers across hosts, making it practical for less complex deployments. AWS Fargate runs containers through Amazon ECS or EKS while removing much of the need to provision and maintain worker hosts. Its usage-based pricing depends on configured CPU, memory, storage, runtime, and other AWS charges.
+
+For a startup prioritizing delivery speed over infrastructure scaling, AWS Fargate is the recommended starting point when the workload fits its constraints and the team is already using AWS. It reduces host-management work so developers can focus on product delivery. The recommendation is conditional: estimate total cost, check service quotas and regional pricing, and reassess if advanced orchestration or portability becomes important. Kubernetes is better when control and ecosystem breadth justify the overhead; Swarm is suitable for straightforward Docker-native workloads.
+
